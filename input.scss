@@ -420,18 +420,17 @@ $ease: transform .6s ease-out;
 
 
     #pg4 {
-        height: 100vh;        
+
         position: relative;
         z-index: 1;
-        padding: 10px;
-                        
+        padding: 10px;        
 
         h2 {
             color: $text_col;   
             text-align: center;         
             padding: 10%;
             font-size: 2rem;   
-            margin-top: 90%;
+            // margin-top: 90%;
             
         }
         h3 {

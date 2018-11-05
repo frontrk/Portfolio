@@ -661,7 +661,6 @@ html {
   }
 }
 .container #pg4 {
-  height: 100vh;
   position: relative;
   z-index: 1;
   padding: 10px;
@@ -671,7 +670,6 @@ html {
   text-align: center;
   padding: 10%;
   font-size: 2rem;
-  margin-top: 90%;
 }
 .container #pg4 h3 {
   color: white;
