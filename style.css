@@ -596,27 +596,69 @@ html {
   padding: 10%;
   font-size: 2rem;
 }
-.container #pg3 .gallery {
-  padding: 0.5vh;
-  font-size: 0;
-  display: -ms-flexbox;
-  -ms-flex-wrap: wrap;
-  -ms-flex-direction: column;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  display: -webkit-box;
-  display: flex;
+.container #pg3 .columns {
+  column-count: 3;
+  column-gap: 12px;
+  column-width: 33.3333333333%;
+  z-index: 1;
 }
-.container #pg3 .gallery div {
-  -webkit-box-flex: auto;
-  -ms-flex: auto;
-  flex: auto;
-  width: 200px;
-  margin: 0.5vh;
-}
-.container #pg3 .gallery div img {
+.container #pg3 .columns .col {
   width: 100%;
   height: auto;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.container #pg3 .columns .col span {
+  min-width: 100px;
+  position: absolute;
+  z-index: 3;
+  color: white;
+  background: rgba(0, 0, 0, 0.897);
+  opacity: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 1px;
+  padding: 5px;
+  text-transform: uppercase;
+  padding: 20px;
+  transition: all 0.2s ease;
+}
+.container #pg3 .columns .col img {
+  object-fit: cover;
+  width: 100%;
+  border: 1px solid transparent;
+  transition: all 0.9s ease;
+}
+.container #pg3 .columns:hover .col {
+  transform: scale(0.9);
+}
+.container #pg3 .columns:hover .col img {
+  filter: grayscale(0.75);
+  filter: blur(px);
+}
+.container #pg3 .columns:hover .col:hover {
+  z-index: 3;
+  transform: scale(1);
+}
+.container #pg3 .columns:hover .col:hover img {
+  filter: grayscale(0);
+}
+.container #pg3 .columns:hover .col:hover span {
+  visibility: visible;
+  opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+  .container #pg3 .columns {
+    column-count: 2;
+    column-width: 50%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .container #pg3 .columns {
+    column-count: 1;
+    column-width: 100%;
+  }
 }
 .container #pg4 {
   height: 100vh;
